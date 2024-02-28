@@ -6,12 +6,11 @@ public class App {
     public static void main(String[] args) {
         Favorites favs = new Favorites();
         Idioms idioms = new Idioms();
-
         Scanner scanner = new Scanner(System.in);
+        
         boolean running = true;
 
         Print.printInit(idioms);
-
         int currentIdiom = idioms.getCurrent();
 
         while (running) {

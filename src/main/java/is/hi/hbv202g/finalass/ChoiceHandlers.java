@@ -3,7 +3,32 @@ package is.hi.hbv202g.finalass;
 import java.util.Arrays;
 import java.util.Scanner;
 
+/**
+ * The ChoiceHandlers class provides static methods for handling user choices in the application.
+ * It includes methods for getting the user's choice, handling different choices, and performing
+ * various actions based on the user's input.
+ */
 public class ChoiceHandlers {
+
+    public static String getChoice(Scanner scanner) {
+        return choice(scanner);
+    }
+
+    public static int handleNyjanChoice(Idioms idioms) {
+        return nyjanChoice(idioms);
+    }
+
+    public static int handleVistaChoice(Favorites favs, Idioms idioms, int currentIdiom) {
+        return vistaChoice(favs, idioms, currentIdiom);
+    }
+
+    public static void handleSkodaChoice(Favorites favs, Scanner scanner, int current) {
+        skodaChoice(favs, scanner, current);
+    }
+
+    public static void handleHaettaChoice() {
+        haettaChoice();
+    }
 
     private static String choice(Scanner scanner) {
         Print.printMainInstr();
@@ -16,18 +41,10 @@ public class ChoiceHandlers {
 
         return choice;
     }
-
-    public static String getChoice(Scanner scanner) {
-        return choice(scanner);
-    }
-
+    
     private static int nyjanChoice(Idioms idioms) {
         Print.printIdiom(idioms);
         return idioms.getCurrent();
-    }
-
-    public static int handleNyjanChoice(Idioms idioms) {
-        return nyjanChoice(idioms);
     }
 
     private static int vistaChoice(Favorites favs, Idioms idioms, int currentIdiom) {
@@ -40,10 +57,6 @@ public class ChoiceHandlers {
             System.out.println(Idioms.getIdiomCollection()[currentIdiom] + "\n");
         }
         return currentIdiom;
-    }
-
-    public static int handleVistaChoice(Favorites favs, Idioms idioms, int currentIdiom) {
-        return vistaChoice(favs, idioms, currentIdiom);
     }
 
     private static void skodaChoice(Favorites favs, Scanner scanner, int current) {
@@ -69,17 +82,9 @@ public class ChoiceHandlers {
         }
     }
 
-    public static void handleSkodaChoice(Favorites favs, Scanner scanner, int current) {
-        skodaChoice(favs, scanner, current);
-    }
-
     private static void haettaChoice() {
         System.out.println("\nTakk fyrir að nota Málshátt! Vertu sæ/l/ll/lt!\n");
         System.exit(0);
-    }
-
-    public static void handleHaettaChoice() {
-        haettaChoice();
     }
 
 }

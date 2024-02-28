@@ -7,6 +7,10 @@ package is.hi.hbv202g.finalass;
 public class Favorites {
     private String[] favs;
 
+    /**
+     * The constructor initializes a string list for favorites,
+     * and sets each entry as the empty string.
+     */
     public Favorites() {
         favs = new String[10];
         for (int i = 0; i < favs.length; i++) favs[i] = "";
