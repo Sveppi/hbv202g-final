@@ -50,4 +50,33 @@ public class Print {
         System.out.println("Til að eyða úr uppáhalds, skrifaðu númerið,");
         System.out.print("til að fara til baka, skrifaðu 'baka': ");
     }
+
+    /**
+     * Prints confirmation of saving the idiom and then prints a new randomly
+     * selected idiom.
+     * 
+     * @param idioms The Idioms object containing the list of idioms.
+     */
+    public static void printNewAfterSave(Idioms idioms) {
+        System.out.println("\n" + "Málsháttur vistaður, hérna er nýr:");
+        printIdiom(idioms);
+    }
+
+
+    public static void printQuit() {
+        System.out.println("\nTakk fyrir að nota Málshátt! Vertu sæ/l/ll/lt!\n");
+    }
+
+    public static void printRemovefromFav() {
+        System.out.println("\n" + "Málsháttur fjarlægður úr úppáhalds\n");
+    }
+
+    public static void printReturnfromFav(int current) {
+        System.out.println("\n" + "Hérna er síðasti málsháttur:" + "\n");
+        System.out.print(Idioms.getIdiomCollection()[current] + "\n");
+    }
+
+    public static void printInvalidChoice() {
+        System.out.println("\nÓgilt val\n");
+    }
 }

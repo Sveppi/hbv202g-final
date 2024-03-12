@@ -6,60 +6,66 @@ import java.util.Scanner;
 /**
  * The ChoiceHandlers class provides static methods for handling user choices in the application.
  * It includes methods for getting the user's choice, handling different choices, and performing
- * various actions based on the user's input.
+ * various actions based on the user's input. Uses Facade design pattern.
  */
 public class ChoiceHandlers {
 
-    public static String getChoice(Scanner scanner) {
-        return choice(scanner);
+    private Idioms idioms;
+    private Favorites favs;
+    private int current;
+    private Scanner scanner;
+
+    public ChoiceHandlers(Idioms idioms, Favorites favs, int current, Scanner scanner) {
+        this.idioms = idioms;
+        this.favs = favs;
+        this.current = current;
+        this.scanner = scanner;
     }
 
-    public static int handleNyjanChoice(Idioms idioms) {
-        return nyjanChoice(idioms);
-    }
-
-    public static int handleVistaChoice(Favorites favs, Idioms idioms, int currentIdiom) {
-        return vistaChoice(favs, idioms, currentIdiom);
-    }
-
-    public static void handleSkodaChoice(Favorites favs, Scanner scanner, int current) {
-        skodaChoice(favs, scanner, current);
-    }
-
-    public static void handleHaettaChoice() {
-        haettaChoice();
-    }
-
-    private static String choice(Scanner scanner) {
-        Print.printMainInstr();
-        String choice = scanner.nextLine();
-
-        if (!Arrays.asList(Navigation.getMainChoices()).contains(choice)) {
-            System.out.println("\nÓgilt val\n");
-            return getChoice(scanner);
+    public void handleChoice() {
+        String choice = getChoice();
+        switch (choice) {
+            case "nyjan":
+                handleNyjanChoice();
+                break;
+            case "vista":
+                handleVistaChoice();
+                break;
+            case "skoda":
+                handleSkodaChoice();
+                break;
+            case "haetta":
+                handleHaettaChoice();
+                break;
+            default:
+                Print.printInvalidChoice();
+                handleChoice();
+                break;
         }
-
-        return choice;
     }
-    
-    private static int nyjanChoice(Idioms idioms) {
+
+    private String getChoice() {
+        Print.printMainInstr();
+        return scanner.nextLine();
+    }
+
+    private int handleNyjanChoice() {
         Print.printIdiom(idioms);
         return idioms.getCurrent();
     }
 
-    private static int vistaChoice(Favorites favs, Idioms idioms, int currentIdiom) {
-        boolean saved = favs.addFavorite(Idioms.getIdiomCollection()[currentIdiom]);
+    private int handleVistaChoice() {
+        boolean saved = favs.addFavorite(Idioms.getIdiomCollection()[current]);
         if (saved) {
-            System.out.println("\n" + "Málsháttur vistaður, hérna er nýr:");
-            Print.printIdiom(idioms);
-            currentIdiom = idioms.getCurrent();
+            Print.printNewAfterSave(idioms);
+            current = idioms.getCurrent();
         } else {
-            System.out.println(Idioms.getIdiomCollection()[currentIdiom] + "\n");
+            System.out.println(Idioms.getIdiomCollection()[current] + "\n");
         }
-        return currentIdiom;
+        return current;
     }
 
-    private static void skodaChoice(Favorites favs, Scanner scanner, int current) {
+    private void handleSkodaChoice() {
         boolean inFav = true;
 
         while (inFav) {
@@ -67,23 +73,22 @@ public class ChoiceHandlers {
             String favchoice = scanner.nextLine();
 
             if (!Arrays.asList(Navigation.getFavChoices()).contains(favchoice)) {
-                System.out.println("Ógilt val");
+                Print.printInvalidChoice();
                 continue;
             }
 
             if (favchoice.equals("baka")) {
-                System.out.println("\n" + "Hérna er síðasti málsháttur:" + "\n");
-                System.out.print(Idioms.getIdiomCollection()[current] + "\n");
+                Print.printReturnfromFav(current);
                 inFav = false;
             } else {
                 favs.removeFavorite(Integer.parseInt(favchoice));
-                System.out.println("\n" + "Málsháttur fjarlægður úr úppáhalds\n");
+                Print.printRemovefromFav();
             }
         }
     }
 
-    private static void haettaChoice() {
-        System.out.println("\nTakk fyrir að nota Málshátt! Vertu sæ/l/ll/lt!\n");
+    private void handleHaettaChoice() {
+        Print.printQuit();
         System.exit(0);
     }
 
