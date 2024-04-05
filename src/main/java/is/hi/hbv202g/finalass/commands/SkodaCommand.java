@@ -1,7 +1,11 @@
-package is.hi.hbv202g.finalass;
+package is.hi.hbv202g.finalass.commands;
 
 import java.util.Arrays;
 import java.util.Scanner;
+
+import is.hi.hbv202g.finalass.Favorites;
+import is.hi.hbv202g.finalass.Navigation;
+import is.hi.hbv202g.finalass.Print;
 
 /**
  * The SkodaCommand class represents a command to remove a favorite item from the favorites list.

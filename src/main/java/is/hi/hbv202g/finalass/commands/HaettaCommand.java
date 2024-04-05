@@ -1,4 +1,6 @@
-package is.hi.hbv202g.finalass;
+package is.hi.hbv202g.finalass.commands;
+
+import is.hi.hbv202g.finalass.Print;
 
 /**
  * The HaettaCommand class represents a command to quit the program.

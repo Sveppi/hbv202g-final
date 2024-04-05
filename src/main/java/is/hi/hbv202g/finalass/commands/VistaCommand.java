@@ -1,4 +1,8 @@
-package is.hi.hbv202g.finalass;
+package is.hi.hbv202g.finalass.commands;
+
+import is.hi.hbv202g.finalass.Favorites;
+import is.hi.hbv202g.finalass.Idioms;
+import is.hi.hbv202g.finalass.Print;
 
 /**
  * The `VistaCommand` class represents a command that adds an idiom to the favorites list.
