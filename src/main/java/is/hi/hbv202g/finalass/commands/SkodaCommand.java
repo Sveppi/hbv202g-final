@@ -49,6 +49,8 @@ public class SkodaCommand implements Command {
             if (favchoice.equals("baka")) {
                 Print.printReturnfromFav(current);
                 inFav = false;
+            } else if (favs.getFavorite(Integer.parseInt(favchoice)).equals("")) {
+                Print.printEmptyFavorite();
             } else {
                 favs.removeFavorite(Integer.parseInt(favchoice));
                 Print.printRemovefromFav();

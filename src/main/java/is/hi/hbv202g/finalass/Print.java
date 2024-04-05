@@ -62,21 +62,43 @@ public class Print {
         printIdiom(idioms);
     }
 
-
+    /**
+     * Prints a thank you message when quitting the program.
+     */
     public static void printQuit() {
         System.out.println("\nTakk fyrir að nota Málshátt! Vertu sæ/l/ll/lt!\n");
     }
 
+    /**
+     * Prints confirmation that an idiom has been removed from favorites.
+     */
     public static void printRemovefromFav() {
         System.out.println("\n" + "Málsháttur fjarlægður úr úppáhalds\n");
     }
 
+    /**
+     * Prints the last idiom when returning from the favorites list.
+     * 
+     * @param current An int pointing to the current idiom from before viewing
+     * the favoirites list
+     */
     public static void printReturnfromFav(int current) {
         System.out.println("\n" + "Hérna er síðasti málsháttur:" + "\n");
         System.out.print(Idioms.getIdiomCollection()[current] + "\n");
     }
 
+    /**
+     * Prints a message informing user that they've made an invalid choice.
+     */
     public static void printInvalidChoice() {
         System.out.println("\nÓgilt val\n");
+    }
+
+    /**
+     * Prints a message informing the user that their chosen entry in the favorites
+     * list is empty.
+     */
+    public static void printEmptyFavorite() {
+        System.out.println("\n" + "Engin málsháttur í þessu hólfi\n");
     }
 }

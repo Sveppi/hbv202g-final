@@ -85,7 +85,8 @@ public class Favorites {
         return findFirstFree() == -1;
     }
 
-    
+    public String getFavorite(int x) {
+        if (x > 0 && x < 11) return favs[x-1];
+        else return "Engin málsháttur í hólfi";
+    }
 }
-
-
