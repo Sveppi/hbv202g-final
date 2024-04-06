@@ -1,9 +1,9 @@
-/**
- * The Favorites class represents a collection of favorite items.
- * It provides methods to add, remove, and retrieve favorite items.
- */
 package is.hi.hbv202g.finalass;
 
+/**
+ * The Favorites class represents a list of favorite items.
+ * It provides methods to add, remove, and retrieve favorite items.
+ */
 public class Favorites {
     private String[] favs;
 
@@ -35,6 +35,17 @@ public class Favorites {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < favs.length; i++) sb.append((i + 1) + ". " + favs[i] + "\n");
         return sb.toString();
+    }
+
+    /**
+     * Retrieves the favorite item at the specified index.
+     * 
+     * @param x the index of the favorite item to retrieve
+     * @return the favorite item at the specified index, or "Engin málsháttur í hólfi" if the index is out of range
+     */
+    public String getFavorite(int x) {
+        if (x > 0 && x < 11) return favs[x-1];
+        else return "Engin málsháttur í hólfi";
     }
 
     /**
@@ -83,10 +94,5 @@ public class Favorites {
      */
     public boolean isFavFull() {
         return findFirstFree() == -1;
-    }
-
-    public String getFavorite(int x) {
-        if (x > 0 && x < 11) return favs[x-1];
-        else return "Engin málsháttur í hólfi";
     }
 }

@@ -1,22 +1,18 @@
 package is.hi.hbv202g.finalass.commands;
 
 import org.junit.Test;
-
-import is.hi.hbv202g.finalass.Favorites;
-import is.hi.hbv202g.finalass.Idioms;
 import static org.mockito.Mockito.*;
-
-
 import java.util.Scanner;
 
-
+import is.hi.hbv202g.finalass.Favorites;
 
 public class SkodaCommandTest {
     @Test
     public void testExecute() {
         // Arrange
-        Scanner scanner = new Scanner("1"); // assuming "1" is a valid input
+        Scanner scanner = new Scanner("1\nbaka"); // assuming "1" is a valid input
         Favorites favs = mock(Favorites.class);
+        when(favs.getFavorite(1)).thenReturn("Málsháttur");
         int current = 0;
         SkodaCommand command = new SkodaCommand(scanner, favs, current);
 
@@ -24,8 +20,6 @@ public class SkodaCommandTest {
         command.execute();
 
         // Assert
-        verify(favs).removeFavorite(anyInt());
-
-
+        verify(favs).removeFavorite(eq(1));
     }
 }
