@@ -1,0 +1,8 @@
+<project>
+    <body>
+      <menu name="UML">
+        <item name="Design Diagram" href="design.html" />
+      </menu>
+      <menu ref="reports" />
+    </body>
+</project>

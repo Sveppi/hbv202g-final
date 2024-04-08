@@ -5,15 +5,25 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
+/**
+ * This class contains unit tests for the Favorites class.
+ */
 public class FavoritesTest {
 
     private Favorites favorites;
 
+    /**
+     * Sets up the test fixture by creating a new instance of Favorites.
+     */
     @Before
     public void setUp() {
         favorites = new Favorites();
     }
 
+    /**
+     * Tests the getFavs method of the Favorites class.
+     * It checks if the returned array is empty when no favorites have been added.
+     */
     @Test
     public void testGetFavs() {
         String[] expected = new String[10];
@@ -23,6 +33,10 @@ public class FavoritesTest {
         assertArrayEquals(expected, favorites.getFavs());
     }
 
+    /**
+     * Tests the addFavorite method of the Favorites class.
+     * It checks if favorites can be added successfully and if the limit of 10 favorites is enforced.
+     */
     @Test
     public void testAddFavorite() {
         assertTrue(favorites.addFavorite("Favorite 1"));
@@ -38,6 +52,10 @@ public class FavoritesTest {
         assertFalse(favorites.addFavorite("Favorite 11"));
     }
 
+    /**
+     * Tests the removeFavorite method of the Favorites class.
+     * It checks if favorites can be removed successfully and if the array is updated correctly.
+     */
     @Test
     public void testRemoveFavorite() {
         favorites.addFavorite("Favorite 1");
@@ -56,6 +74,10 @@ public class FavoritesTest {
         assertArrayEquals(expected, favorites.getFavs());
     }
 
+    /**
+     * Tests the isFavFull method of the Favorites class.
+     * It checks if the method correctly identifies whether the favorites array is full or not.
+     */
     @Test
     public void testIsFavFull() {
         assertFalse(favorites.isFavFull());
@@ -67,6 +89,10 @@ public class FavoritesTest {
         assertTrue(favorites.isFavFull());
     }
 
+    /**
+     * Tests the findFirstFree method of the Favorites class.
+     * It checks if the method correctly returns the index of the first free slot in the favorites array.
+     */
     @Test
     public void testFindFirstFree() {
         assertEquals(0, favorites.findFirstFree());

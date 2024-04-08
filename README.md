@@ -1,4 +1,4 @@
-# Project Name
+# Málsháttur
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
@@ -10,6 +10,7 @@
 
 - [Installation](#installation)
 - [Usage](#usage)
+- [Design] (#design)
 - [License](#license)
 - [Contact](#contact)
 
@@ -29,6 +30,12 @@ You interact with the program through a CLI. At each step the valid options are 
 - "haetta" : quit the program
 
 While in the favorites view you can also delete from the favorites by typing the number of the favorite. You can return to the main randomizer by typing "baka".
+
+## Design
+
+[A UML diagram of the project design](./src/site/markdown/design.md)
+
+The project utilizes the Command pattern to execute the correct command on the input from the user.
 
 ## License
 

@@ -5,7 +5,13 @@ import is.hi.hbv202g.finalass.Favorites;
 import is.hi.hbv202g.finalass.Idioms;
 import static org.mockito.Mockito.*;
 
+/**
+ * This class contains unit tests for the VistaCommand class.
+ */
 public class VistaCommandTest {
+     /**
+     * Test case for the execute method of VistaCommand.
+     */
     @Test
     public void testExecute() {
         // Arrange

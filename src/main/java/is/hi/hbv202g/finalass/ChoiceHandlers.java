@@ -20,6 +20,14 @@ public class ChoiceHandlers {
     private Scanner scanner;
     private Map<String, Command> commands = new HashMap<>();
 
+    /**
+     * Constructs a new ChoiceHandlers object with the given parameters.
+     *
+     * @param idioms   the Idioms object to be used by the command handlers
+     * @param favs     the Favorites object to be used by the command handlers
+     * @param current  the current position in the list of favorites
+     * @param scanner  the Scanner object to be used for user input
+     */
     public ChoiceHandlers(Idioms idioms, Favorites favs, int current, Scanner scanner) {
         this.scanner = scanner;
 
@@ -27,7 +35,6 @@ public class ChoiceHandlers {
         commands.put("vista", new VistaCommand(idioms, favs, current));
         commands.put("skoda", new SkodaCommand(scanner, favs, current));
         commands.put("haetta", new HaettaCommand());
-
     }
 
     /**

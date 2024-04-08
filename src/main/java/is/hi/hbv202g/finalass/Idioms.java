@@ -1,15 +1,14 @@
+package is.hi.hbv202g.finalass;
+
+import java.util.Random;
+
 /**
  * The Idioms class represents a collection of idioms.
  * It provides access to a predefined array of idioms and
  * allows iterating over them by random means.
  */
-package is.hi.hbv202g.finalass;
-
-import java.util.Random;
-
 public class Idioms {
 
-    public static final int IDIOM_COUNT = 828;
     private int current;
     private static Random random = new Random();
 
@@ -17,6 +16,9 @@ public class Idioms {
         current = 0;
     }
 
+    /**
+     * Protected, final String array containing all the idioms.
+     */
     protected static final String[] idiomCollection = { 
             "Aldur og sótt koma brátt í bú",
             "Gott atlæti er gjöfum betra",
@@ -857,7 +859,6 @@ public class Idioms {
         return idiomCollection;
     }
 
-
     /**
      * Returns the index of the current idom.
      *
@@ -873,8 +874,7 @@ public class Idioms {
      * @return a random idiom as a String
      */
     public String getRandomIdiom() {
-        current = random.nextInt(IDIOM_COUNT);
+        current = random.nextInt(idiomCollection.length);
         return Idioms.getIdiomCollection()[current];
     }
 }
-

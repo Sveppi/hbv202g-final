@@ -101,4 +101,12 @@ public class Print {
     public static void printEmptyFavorite() {
         System.out.println("\n" + "Engin málsháttur í þessu hólfi\n");
     }
+
+     /**
+     * Prints a message informing the user that the favorites is full list is empty.
+     */
+    public static void printFavsFull() {
+        System.out.println("\n" + "Uppáhalds er fullt, þarft að eyða til að geta vistað");
+        System.out.println("Þetta var málshátturinn þinn:\n");
+    }
 }

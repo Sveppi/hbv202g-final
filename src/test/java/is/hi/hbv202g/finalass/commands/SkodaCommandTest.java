@@ -6,7 +6,13 @@ import java.util.Scanner;
 
 import is.hi.hbv202g.finalass.Favorites;
 
+/**
+ * This class contains unit tests for the SkodaCommand class.
+ */
 public class SkodaCommandTest {
+    /**
+     * Test case for the execute method of SkodaCommand.
+     */
     @Test
     public void testExecute() {
         // Arrange

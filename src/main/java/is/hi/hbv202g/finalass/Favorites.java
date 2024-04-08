@@ -59,8 +59,7 @@ public class Favorites {
             favs[findFirstFree()] = x;
             return true;
         } else {
-            System.out.println("\n" + "Uppáhalds er fullt, þarft að eyða til að geta vistað");
-            System.out.println("Þetta var málshátturinn þinn:\n");
+            Print.printFavsFull();
             return false;
         }
     }
