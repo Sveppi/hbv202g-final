@@ -10,7 +10,7 @@
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Design] (#design)
+- [Design](#design)
 - [License](#license)
 - [Contact](#contact)
 
