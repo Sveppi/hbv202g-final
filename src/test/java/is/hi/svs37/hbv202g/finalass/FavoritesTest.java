@@ -1,9 +1,11 @@
-package is.hi.hbv202g.finalass;
+package is.hi.svs37.hbv202g.finalass;
 
 import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import is.hi.svs37.hbv202g.finalass.Favorites;
 
 /**
  * This class contains unit tests for the Favorites class.

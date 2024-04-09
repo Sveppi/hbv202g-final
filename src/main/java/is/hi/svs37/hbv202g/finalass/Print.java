@@ -1,4 +1,4 @@
-package is.hi.hbv202g.finalass;
+package is.hi.svs37.hbv202g.finalass;
 
 /**
  * The Print class provides methods for printing messages related to the Idioms application.

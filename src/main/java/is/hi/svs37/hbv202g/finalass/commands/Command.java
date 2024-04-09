@@ -1,4 +1,4 @@
-package is.hi.hbv202g.finalass.commands;
+package is.hi.svs37.hbv202g.finalass.commands;
 
 /**
  * The Command interface represents a command that can be executed.

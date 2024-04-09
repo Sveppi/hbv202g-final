@@ -1,0 +1,1 @@
+java -cp target/hbv202g-final-1.0.jar is.hi.svs37.hbv202g.finalass.App

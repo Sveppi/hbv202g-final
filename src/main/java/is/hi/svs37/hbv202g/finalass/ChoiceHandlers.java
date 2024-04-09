@@ -1,14 +1,14 @@
-package is.hi.hbv202g.finalass;
+package is.hi.svs37.hbv202g.finalass;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-import is.hi.hbv202g.finalass.commands.Command;
-import is.hi.hbv202g.finalass.commands.HaettaCommand;
-import is.hi.hbv202g.finalass.commands.NyjanCommand;
-import is.hi.hbv202g.finalass.commands.SkodaCommand;
-import is.hi.hbv202g.finalass.commands.VistaCommand;
+import is.hi.svs37.hbv202g.finalass.commands.Command;
+import is.hi.svs37.hbv202g.finalass.commands.HaettaCommand;
+import is.hi.svs37.hbv202g.finalass.commands.NyjanCommand;
+import is.hi.svs37.hbv202g.finalass.commands.SkodaCommand;
+import is.hi.svs37.hbv202g.finalass.commands.VistaCommand;
 
 /**
  * The ChoiceHandlers class handles the user's choices and executes the corresponding commands.

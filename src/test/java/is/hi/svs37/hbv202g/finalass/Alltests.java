@@ -1,12 +1,12 @@
-package is.hi.hbv202g.finalass;
+package is.hi.svs37.hbv202g.finalass;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
-import is.hi.hbv202g.finalass.commands.NyjanCommandTest;
-import is.hi.hbv202g.finalass.commands.SkodaCommandTest;
-import is.hi.hbv202g.finalass.commands.VistaCommandTest;
+import is.hi.svs37.hbv202g.finalass.commands.NyjanCommandTest;
+import is.hi.svs37.hbv202g.finalass.commands.SkodaCommandTest;
+import is.hi.svs37.hbv202g.finalass.commands.VistaCommandTest;
 
 /**
  * This class represents a test suite that runs all the test classes for the composite pattern implementation.

@@ -1,4 +1,4 @@
-package is.hi.hbv202g.finalass;
+package is.hi.svs37.hbv202g.finalass;
 
 /**
  * The Navigation class represents the navigation options available in the

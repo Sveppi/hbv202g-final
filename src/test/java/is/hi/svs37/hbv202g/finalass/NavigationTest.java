@@ -1,7 +1,9 @@
-package is.hi.hbv202g.finalass;
+package is.hi.svs37.hbv202g.finalass;
 
 import org.junit.Assert;
 import org.junit.Test;
+
+import is.hi.svs37.hbv202g.finalass.Navigation;
 
 /**
  * This class contains unit tests for the Navigation class.
