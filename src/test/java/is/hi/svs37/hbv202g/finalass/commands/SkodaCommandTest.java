@@ -1,10 +1,7 @@
 package is.hi.svs37.hbv202g.finalass.commands;
 
 import org.junit.Test;
-
 import is.hi.svs37.hbv202g.finalass.Favorites;
-import is.hi.svs37.hbv202g.finalass.commands.SkodaCommand;
-
 import static org.mockito.Mockito.*;
 import java.util.Scanner;
 

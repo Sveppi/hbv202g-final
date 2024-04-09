@@ -1,10 +1,7 @@
 package is.hi.svs37.hbv202g.finalass.commands;
 
 import org.junit.Test;
-
 import is.hi.svs37.hbv202g.finalass.Idioms;
-import is.hi.svs37.hbv202g.finalass.commands.NyjanCommand;
-
 import static org.mockito.Mockito.*;
 
 /**

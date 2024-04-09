@@ -1,11 +1,8 @@
 package is.hi.svs37.hbv202g.finalass.commands;
 
 import org.junit.Test;
-
 import is.hi.svs37.hbv202g.finalass.Favorites;
 import is.hi.svs37.hbv202g.finalass.Idioms;
-import is.hi.svs37.hbv202g.finalass.commands.VistaCommand;
-
 import static org.mockito.Mockito.*;
 
 /**
