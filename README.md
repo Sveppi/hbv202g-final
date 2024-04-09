@@ -18,15 +18,15 @@
 
 'mvn install' compiles the program through Maven.
 
-Or a JAR can be create by running the command ....
+Or a JAR can be create by running the command 'source createjar.cmd'.
 
 ## Usage
 
-Run the program through Maven with the command 'mvn exec:java'
+Run the program through Maven with the command 'mvn exec:java'.
 
-Or the created JAR can then be run with the command ....
+Or the created JAR can then be run with the command 'source runjar.cmd'.
 
-You interact with the program through a CLI. At each step the valid options are printed for you. Simply type in what you want to do.
+You interact with the program through a CLI. At each step the valid options are printed for you. Simply type in what you want to do:
 
 - "nyjan" : get a random idiom
 - "vista" : save the current idiom to favorites
