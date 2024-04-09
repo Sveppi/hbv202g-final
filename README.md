@@ -35,6 +35,8 @@ You interact with the program through a CLI. At each step the valid options are 
 
 While in the favorites view you can also delete from the favorites by typing the number of the favorite. You can return to the main randomizer by typing "baka".
 
+To generate the documentation, use command 'mvn site'.
+
 ## Design
 
 [A UML diagram of the project design](./src/site/markdown/design.md)
