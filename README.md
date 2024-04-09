@@ -16,11 +16,15 @@
 
 ## Installation
 
-'mvn install' compiles the program.
+'mvn install' compiles the program through Maven.
+
+Or a JAR can be create by running the command ....
 
 ## Usage
 
-Run the program with the command 'mvn exec:java'
+Run the program through Maven with the command 'mvn exec:java'
+
+Or the created JAR can then be run with the command ....
 
 You interact with the program through a CLI. At each step the valid options are printed for you. Simply type in what you want to do.
 
